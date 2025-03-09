@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parts Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('car.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .caption {
+            
+            color: black;
+            padding: 4px;
+            font-size: 30px;
+            font-weight: bold;
+        
+        }
+        .header {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: black;
+            padding: 5px;
+            font-size: 70px;
+            font-weight: bold;
+        }
+        .search-bar {
+            margin: 20px auto;
+            width: 50%;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 20px;
+        }
+        .search-bar button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .brands {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .brand {
+            margin-top: 50px;
+            margin-bottom: 0%;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            width: 150px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .brand:hover {
+            background-color: rgba(8, 8, 8, 0.7);
+            color: white;
+        }
+    </style>
+    <script>
+        function navigateToBrand(brand) {
+            window.location.href = brand.toLowerCase() + ".html";
+        }
+    </script>
+</head>
+<body>
+    <h1 class="header">SPARE PRO</h1>
+    <h1 class="caption">AUTO PARTS EXPERT</h1>
+    
+    <div class="search-bar">
+        <input type="text" placeholder="Search for parts...">
+        <button>Search</button>
+    </div>
+    <div class="brands">
+        <div class="brand" onclick="navigateToBrand('Hyundai')">Hyundai</div>
+        <div class="brand" onclick="navigateToBrand('Maruti')">Maruti</div>
+        <div class="brand" onclick="navigateToBrand('Toyota')">Toyota</div>
+        <div class="brand" onclick="navigateToBrand('Honda')">Honda</div>
+        <div class="brand" onclick="navigateToBrand('Ford')">Ford</div>
+        <div class="brand" onclick="navigateToBrand('Nissan')">Nissan</div>
+        <div class="brand" onclick="navigateToBrand('Volkswagen')">Volkswagen</div>
+    </div>
+</body>
+</html>
